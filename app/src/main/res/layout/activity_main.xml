@@ -7,7 +7,6 @@
     tools:context="com.example.android.quiz.MainActivity">
 
     <!--HEADER-->
-
     <RelativeLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -42,12 +41,10 @@
         android:isScrollContainer="true"
         android:scrollbars="none">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
 
             <!--Question 1-->
             <LinearLayout
@@ -61,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question1"
-                    android:textColor="#000"
+                    android:textColor="@color/black"
                    />
 
                 <RadioGroup
@@ -107,7 +104,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question2"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -150,7 +147,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question3"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -190,7 +187,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question4"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -231,7 +228,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question5"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -272,7 +269,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question6"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -313,7 +310,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question7"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -354,7 +351,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question8"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -395,7 +392,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question9"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -424,7 +421,7 @@
 
             </LinearLayout>
 
-            <!--Question 01-->
+            <!--Question 10-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -436,7 +433,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question10"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -466,7 +463,6 @@
             </LinearLayout>
 
             <!--Question 11 | Checkbox-->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -478,7 +474,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/question11"
-                    android:textColor="#000" />
+                    android:textColor="@color/black" />
 
                 <RadioGroup
                     android:layout_width="wrap_content"
@@ -544,9 +540,7 @@
 
             </LinearLayout>
 
-
             <!--Result-->
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -572,7 +566,6 @@
                     android:onClick="shareScore"/>
 
             </LinearLayout>
-
 
         </LinearLayout>
 

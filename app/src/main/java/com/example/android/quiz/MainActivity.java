@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RadioButton q1, q2, q3, q4, q5, q6, q7, q8, q9, q10;
     private int score = 0;
-
     private CheckBox a, b, c, d;
     private EditText answer;
 
@@ -38,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Radiobuttons
-
         q1 = (RadioButton) findViewById(R.id.correct1);
         q2 = (RadioButton) findViewById(R.id.correct2);
         q3 = (RadioButton) findViewById(R.id.correct3);
@@ -49,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
         q8 = (RadioButton) findViewById(R.id.correct8);
         q9 = (RadioButton) findViewById(R.id.correct9);
         q10 = (RadioButton) findViewById(R.id.correct10);
-
 
         //  Check Box
         a = (CheckBox) findViewById(R.id.correct11_a);
@@ -65,56 +62,43 @@ public class MainActivity extends AppCompatActivity {
 
     public void submit(View view) {
 
-        if (q1.isChecked()) {
+        if (q1.isChecked())
             score += 1;
-        }
 
-        if (q2.isChecked()) {
+        if (q2.isChecked())
             score += 1;
-        }
 
-        if (q3.isChecked()) {
+        if (q3.isChecked())
             score += 1;
-        }
 
-        if (q4.isChecked()) {
+        if (q4.isChecked())
             score += 1;
-        }
 
-        if (q5.isChecked()) {
+        if (q5.isChecked())
             score += 1;
-        }
 
-        if (q6.isChecked()) {
+        if (q6.isChecked())
             score += 1;
-        }
 
-        if (q7.isChecked()) {
+        if (q7.isChecked())
             score += 1;
-        }
 
-        if (q8.isChecked()) {
+        if (q8.isChecked())
             score += 1;
-        }
 
-        if (q9.isChecked()) {
+        if (q9.isChecked())
             score += 1;
-        }
 
-        if (q10.isChecked()) {
+        if (q10.isChecked())
             score += 1;
-        }
 
 
-        if (b.isChecked() && c.isChecked() && !a.isChecked() && !d.isChecked()) {
+        if (b.isChecked() && c.isChecked() && !a.isChecked() && !d.isChecked())
             score += 1;
-        }
 
 
-        if (answer.getText().toString().trim().toLowerCase().equals("google")) {
+        if (answer.getText().toString().trim().toLowerCase().equals("google"))
             score += 1;
-        }
-
 
         Toast.makeText(this, "You Scored: " + score, Toast.LENGTH_SHORT).show();
 
@@ -128,7 +112,6 @@ public class MainActivity extends AppCompatActivity {
         sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Result of your quiz");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
-
         score = 0; //reset score
     }
 
