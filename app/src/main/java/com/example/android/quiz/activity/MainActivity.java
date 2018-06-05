@@ -1,17 +1,15 @@
-package com.example.android.quiz;
+package com.example.android.quiz.activity;
 
 import android.content.Intent;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.android.quiz.R;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private int score = 0;
     private CheckBox a, b, c, d;
     private EditText answer;
+    private boolean isSubmit = false;
 
 
     @Override
@@ -62,57 +61,62 @@ public class MainActivity extends AppCompatActivity {
 
     public void submit(View view) {
 
-        if (q1.isChecked())
-            score += 1;
+        if(!isSubmit){       //allowing only one time to submit the quiz.activity
+            if (q1.isChecked())
+                score ++;
 
-        if (q2.isChecked())
-            score += 1;
+            if (q2.isChecked())
+                score ++;
 
-        if (q3.isChecked())
-            score += 1;
+            if (q3.isChecked())
+                score ++;
 
-        if (q4.isChecked())
-            score += 1;
+            if (q4.isChecked())
+                score ++;
 
-        if (q5.isChecked())
-            score += 1;
+            if (q5.isChecked())
+                score ++;
 
-        if (q6.isChecked())
-            score += 1;
+            if (q6.isChecked())
+                score ++;
 
-        if (q7.isChecked())
-            score += 1;
+            if (q7.isChecked())
+                score ++;
 
-        if (q8.isChecked())
-            score += 1;
+            if (q8.isChecked())
+                score ++;
 
-        if (q9.isChecked())
-            score += 1;
+            if (q9.isChecked())
+                score ++;
 
-        if (q10.isChecked())
-            score += 1;
+            if (q10.isChecked())
+                score ++;
 
+            if (b.isChecked() && c.isChecked() && !a.isChecked() && !d.isChecked())
+                score ++;
 
-        if (b.isChecked() && c.isChecked() && !a.isChecked() && !d.isChecked())
-            score += 1;
+            if (answer.getText().toString().trim().toLowerCase().equals("google"))
+                score ++;
 
+            Toast.makeText(this, "You Scored: " + score, Toast.LENGTH_SHORT).show();
 
-        if (answer.getText().toString().trim().toLowerCase().equals("google"))
-            score += 1;
-
-        Toast.makeText(this, "You Scored: " + score, Toast.LENGTH_SHORT).show();
-
+            isSubmit = true;
+        } else {
+            Toast.makeText(this, "You Scored: " + score, Toast.LENGTH_SHORT).show();
+        }
     }
 
 
     public void shareScore(View view) {
+        score = 0; //reset score
+        isSubmit = false;
         String shareBody = "You Scored: " + score;
         Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
         sharingIntent.setType("text/plain");
-        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Result of your quiz");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Result of your quiz.activity");
         sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
         startActivity(Intent.createChooser(sharingIntent, getResources().getString(R.string.share_using)));
-        score = 0; //reset score
+
     }
 
 
